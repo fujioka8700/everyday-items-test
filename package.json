@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/fujioka8700/everyday-items-test#readme",
   "dependencies": {
+    "@tailwindcss/line-clamp": "^0.2.1",
     "tailwindcss": "^2.2.15"
   }
 }
