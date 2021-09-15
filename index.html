@@ -11,26 +11,33 @@
     <title>日用品一覧</title>
 </head>
 
+<body class="bg-indigo-200"></body>
 <div id="app">
     <div class="bg-gray-300">
         <header class="container mx-auto text-white">
-            <div class="flex justify-between items-center fixed w-full left-0 bg-gray-300 h-16">
+            <div class="flex justify-between items-center fixed w-full left-0 bg-gray-300 h-16 px-2 md:static">
                 <h1 class="text-4xl font-semibold md:text-xl">HR</h1>
                 <div>
                     <button @click="isOpen = !isOpen">
                         <svg class="h-6 w-6 fill-current lg:hidden" viewBox="0 0 24 24">
-                            <path v-show="!isOpen" d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"/>
-                            <path v-show="isOpen" d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z">
+                            <path v-show="!isOpen" d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z" />
+                            <path v-show="isOpen"
+                                d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z">
                         </svg>
                     </button>
                 </div>
             </div>
-            <div :class="isOpen ? 'block' : 'hidden'" class="fixed md:block bg-gray-300 w-full left-0 md:static mt-16">
-                <ul class="pb-1 md:flex md:justify-end md:items-center">
-                    <li class="border-b md:border-none"><a href="#" class="block px-8 py-2 my-4 hover:bg-gray-600 rounded">HRとは</a></li>
-                    <li class="border-b md:border-none"><a href="#" class="block px-8 py-2 my-4 hover:bg-gray-600 rounded">機能一覧</a></li>
-                    <li class="border-b md:border-none"><a href="#" class="block px-8 py-2 my-4 hover:bg-gray-600 rounded">料金プラン</a></li>
-                    <li class="border-b md:border-none"><a href="#" class="block px-8 py-2 my-4 hover:bg-gray-600 rounded">お知らせ</a></li>
+            <div :class="isOpen ? 'block' : 'hidden'"
+                class="fixed md:block bg-gray-300 left-0 w-full mt-16 h-full overflow-y-scroll md:overflow-visible md:static md:mt-0">
+                <ul class="pb-24 md:pb-0 md:flex md:justify-end md:items-center">
+                    <li class="border-b md:border-none"><a href="#"
+                            class="block px-8 py-2 my-4 hover:bg-gray-600 rounded">HRとは</a></li>
+                    <li class="border-b md:border-none"><a href="#"
+                            class="block px-8 py-2 my-4 hover:bg-gray-600 rounded">機能一覧</a></li>
+                    <li class="border-b md:border-none"><a href="#"
+                            class="block px-8 py-2 my-4 hover:bg-gray-600 rounded">料金プラン</a></li>
+                    <li class="border-b md:border-none"><a href="#"
+                            class="block px-8 py-2 my-4 hover:bg-gray-600 rounded">お知らせ</a></li>
                     <div class="my-8 text-center md:my-4">
                         <li><a href="#" class="px-6 py-2 bg-yellow-500 hover:bg-yellow-300 rounded-full">お問い合わせ</a></li>
                     </div>
@@ -40,8 +47,8 @@
     </div>
 </div>
 
-<body class="bg-indigo-200">
-    <div class="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-md flex items-center space-x-4">
+<div class="pt-16 md:pt-0">
+    <div class="mt-8 mb-8 p-6 max-w-sm mx-auto bg-white rounded-xl shadow-md flex items-center space-x-4">
         <div class="flex-shrink-0">
             <img class="h-12 w-12" src="/img/logo.png" alt="ChitChat Logo">
         </div>
@@ -51,7 +58,7 @@
         </div>
     </div>
 
-    <div class="m-20">
+    <div class="container mx-auto">
         <div class="line-clamp-3">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit a in ad voluptatem necessitatibus et
             laborum, minus amet aliquid pariatur fugit recusandae neque illum voluptatibus repellendus est natus harum
@@ -62,28 +69,83 @@
             corrupti. Repellat hic error in totam consequuntur non magni maiores quibusdam quidem cum.
         </div>
     </div>
+</div>
 
-    <div class="container mx-auto">
-        <p>コンテンツ領域</p>
-        <p>ダミー行</p>
-        <p>ダミー行</p>
-        <p>ダミー行</p>
-        <p>ダミー行</p>
-        <p>ダミー行</p>
-        <p>ダミー行</p>
-        <p>ダミー行</p>
-        <p>ダミー行</p>
+<!-- <div class=" p-6 max-w-sm mx-auto bg-white rounded-xl shadow-md flex items-center space-x-4">
+    <div class="flex-shrink-0">
+        <img class="h-12 w-12" src="/img/logo.png" alt="ChitChat Logo">
     </div>
+    <div>
+        <div class="text-xl font-medium text-black">ChitChat</div>
+        <p class="text-gray-500">You have a new message!</p>
+    </div>
+</div>
+
+<div class="m-20">
+    <div class="line-clamp-3">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit a in ad voluptatem necessitatibus et
+        laborum, minus amet aliquid pariatur fugit recusandae neque illum voluptatibus repellendus est natus harum
+        modi maxime eos aliquam eum ratione tempore? Sapiente nam corrupti odio quibusdam dolore harum consequatur
+        sint mollitia at? Voluptas quae eligendi quia omnis porro totam laudantium dolorum. Ipsum quasi cupiditate
+        expedita! Dolor ut voluptatibus quos ipsa beatae, accusamus, a incidunt provident, delectus tempore id ex
+        placeat quo laboriosam iusto velit animi molestiae dignissimos sint perspiciatis quis accusantium maxime
+        corrupti. Repellat hic error in totam consequuntur non magni maiores quibusdam quidem cum.
+    </div>
+</div>
+
+<div class="container mx-auto">
+    <p>コンテンツ領域</p>
+    <p>ダミー行</p>
+    <p>ダミー行</p>
+    <p>ダミー行</p>
+    <p>ダミー行</p>
+    <p>ダミー行</p>
+    <p>ダミー行</p>
+    <p>ダミー行</p>
+    <p>ダミー行</p>
+    <p>ダミー行</p>
+    <p>ダミー行</p>
+    <p>ダミー行</p>
+    <p>ダミー行</p>
+    <p>ダミー行</p>
+    <p>ダミー行</p>
+    <p>ダミー行</p>
+    <p>ダミー行</p>
+    <p>ダミー行</p>
+    <p>ダミー行</p>
+    <p>ダミー行</p>
+    <p>ダミー行</p>
+    <p>ダミー行</p>
+    <p>ダミー行</p>
+    <p>ダミー行</p>
+    <p>ダミー行</p>
+    <p>ダミー行</p>
+    <p>ダミー行</p>
+    <p>ダミー行</p>
+    <p>ダミー行</p>
+    <p>ダミー行</p>
+    <p>ダミー行</p>
+    <p>ダミー行</p>
+    <p>ダミー行</p>
+    <p>ダミー行</p>
+    <p>ダミー行</p>
+    <p>ダミー行</p>
+    <p>ダミー行</p>
+    <p>ダミー行</p>
+    <p>ダミー行</p>
+    <p>ダミー行</p>
+    <p>ダミー行</p>
+</div> -->
 
 
-    <script>
-        const app = new Vue({
-            el: "#app",
-            data: {
-                isOpen: false,
-            }
-        });
-    </script>
+<script>
+    const app = new Vue({
+        el: "#app",
+        data: {
+            isOpen: false,
+        }
+    });
+</script>
 </body>
 
 </html>
