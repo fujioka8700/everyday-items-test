@@ -1,0 +1,23 @@
+{
+  "name": "everyday-items-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwind build css/style.css -o public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fujioka8700/everyday-items-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fujioka8700/everyday-items-test/issues"
+  },
+  "homepage": "https://github.com/fujioka8700/everyday-items-test#readme",
+  "dependencies": {
+    "tailwindcss": "^2.2.15"
+  }
+}
